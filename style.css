@@ -3,6 +3,10 @@ table tr td {
   height: 10px;
 }
 
+.finish {
+  /* background-image: url("https://i.trendopic.com/photo/topic/4352/image-70ced6f4-bef4-4216-8ecc-020ed2eb40ab"); */
+  background-color: black;
+}
 .red {
   background-color: red;
 }

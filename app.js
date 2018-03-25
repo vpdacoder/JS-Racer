@@ -1,7 +1,7 @@
 // alert("I'm working!");
 
-let p1 = document.getElementById('player1');
-let p2 = document.getElementById('player2');
+// let p1 = document.getElementById('player1');
+// let p2 = document.getElementById('player2');
 
 
 //make array to push values from car movements
@@ -20,30 +20,43 @@ boxTwo = [];
 
 
 let current = document.querySelector("td");
+let currentSecond = document.getElementById("second");
 
 
-document.addEventListener('click', () => {
+
+const playerOne = () => {
   console.log("PRESSED");
   current.classList.remove("red");
   current.nextElementSibling.classList.add("red");
   current = current.nextElementSibling;
   boxOne.push(1);
-  if (boxOne.length > 18) {
+  if (boxOne.length >= 19) {
     alert("Player 1 Won");
   }
+}
 
+  const playerTwo = () => {
+    console.log("Two PRESSED");
+    currentSecond.classList.remove("blue");
+    currentSecond.nextElementSibling.classList.add("blue");
+    currentSecond = currentSecond.nextElementSibling;
+    boxTwo.push(1);
+    if (boxTwo.length >= 19) {
+      alert("Player 2 Won");
+    }
+  }
 
 // document.getElementsByClassName('className');
-});
-
-
-
-
-
-// document.keydown = moveBox;
-
-
-
-// button.addEventListener("click", () => {
-// document.body.classList.toggle("back");
 // });
+
+
+const moveBox = (event) => {
+  if (event.keyCode == 39) {
+    playerOne();
+  }
+  if (event.keyCode == 68) {
+    playerTwo();
+  }
+}
+
+document.onkeydown = moveBox;
