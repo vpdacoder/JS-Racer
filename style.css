@@ -1,0 +1,16 @@
+table tr td {
+  width: 4%;
+  height: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+table {
+  width: 80%;
+}
